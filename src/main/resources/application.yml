@@ -1,0 +1,17 @@
+server:
+  port: 8763
+spring:
+  application:
+    name: client-server
+  profiles:
+    active: native
+  cloud:
+    client.hostname: ${spring.cloud.client.ip-address:localhost}
+    config:
+      override-system-properties: false
+      server:
+        native:
+          search-locations:
+            classpath:/config/,
+            classpath:/config/client-config-first,
+            classpath:/config/client-discovery-first
