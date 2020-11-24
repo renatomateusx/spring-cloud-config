@@ -6,3 +6,7 @@ spring:
       server:
         git:
           uri: https://github.com/renatomateusx/repoconfig
+          repos:
+            appFoo:
+              pattern: app-foo
+              uri: https://github.com/renatomateusx/repoconfig
