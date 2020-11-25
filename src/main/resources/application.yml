@@ -1,20 +1,18 @@
-server:
-  port: 8888
+server.port: 8888
+# show full health details at /health
+#endpoints.health.sensitive: false
+
+# spring cloud config repo settings.
 spring:
-  application:
-    name: config-server
-  profiles:
-    active: native
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/renatomateusx/repoconfig
-          repos:
-            appFoo:
-              pattern: app-foo
-              uri: https://github.com/renatomateusx/repoconfig
+          uri: https://github.com/renatomateusx/repoconfig # default repo
+          #search-paths: clean-arch/*
 
-endpoints:
-  restart:
-    enabled: true
+#Disable security of the Management endpoint
+management:
+  security:
+    enabled: false
+  context_path: /admin
