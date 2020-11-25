@@ -9,7 +9,7 @@ spring:
       server:
         git:
           uri: https://github.com/renatomateusx/repoconfig # default repo
-          #search-paths: clean-arch/*
+          search-paths: clean-arch
 
 #Disable security of the Management endpoint
 management:
