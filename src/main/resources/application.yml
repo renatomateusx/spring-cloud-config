@@ -1,6 +1,10 @@
 server:
   port: 8888
 spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
   cloud:
     config:
       server:
@@ -10,3 +14,7 @@ spring:
             appFoo:
               pattern: app-foo
               uri: https://github.com/renatomateusx/repoconfig
+
+endpoints:
+  restart:
+    enabled: true
